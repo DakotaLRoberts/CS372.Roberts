@@ -20,7 +20,7 @@ int main() {
             << " to peg " << TOPEG << endl;
     }
     auto end = steady_clock::now() - start;
-    cout << duration_cast<seconds>(end).count() << endl;
+    cout << "This is how long in seconds it took to complete this task"<< duration_cast<seconds>(end).count() << endl;
 
 }
 
