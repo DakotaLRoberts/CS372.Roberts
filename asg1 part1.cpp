@@ -6,19 +6,19 @@ string* part3one();
 void printpart3();
 int main() {
 	//part1();
-	//part2();
-	printpart3();
+	part2();
+	//printpart3();
 	return 0;
 }
 void part1() {
 	
 
 	int const size = 15;
-	int largearray[size];
-	int* arr = largearray;
+	int* arr = new int[size];
 	for (int i = 0; i < size; i++) {
-		int ran = (rand() % 10);
-		arr[i] = ran;
+	
+		arr[i] = i;
+		cout << arr[i] << endl;// using this line to show what was put into the array 
 	}
 
 
@@ -32,12 +32,13 @@ void part1() {
 }
 void part2(){
 	int const size = 15;
-	int largearray[size];
-	int* firstpoint = largearray;
-	int* secondpoint = largearray;
+	
+	int* firstpoint = new int[size];
+	int* secondpoint = firstpoint;
 	for (int i = 0; i < size; i++) {
-		int ran = (rand() % 10);
-		largearray[i] = ran;
+		
+		firstpoint[i] = i;
+		cout << firstpoint[i] << endl;// using this line to show what was put into the array 
 	}
 
 	delete firstpoint;
