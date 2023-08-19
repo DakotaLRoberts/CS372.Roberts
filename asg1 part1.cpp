@@ -43,7 +43,7 @@ void part2(){
 
 	delete firstpoint;
 
-	cout << &secondpoint << endl;
+	cout << "This is the address of the second pointer" &secondpoint << endl;
 	
 	for (int i = 0; i < 10; i++) {
 		cout << secondpoint[i] << " ";
