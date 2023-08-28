@@ -10,7 +10,7 @@ public:
     vector() {
         arr = new T[1];
         vCapacity = 1;
-        length = 1;
+        length = 0;
     }
     ~vector() {
         delete[] arr;
@@ -98,6 +98,14 @@ public:
         }
         return *this;
     }
+    void erase(size_t index) {
+        if (index < length) {
+            for (size_t i = index; i < length - 1; i++) {
+                arr[i] = arr[i + 1];
+            }
+            length--;
+        }
+    }
     void expand(int newCapacity) {
         if (newCapacity > vCapacity) {
             T* temp = new T[newCapacity];
@@ -106,7 +114,7 @@ public:
             }
             delete[] arr;
             vCapacity = newCapacity;
-            length = newCapacity;
+          
             arr = temp;
         }
         else {
@@ -116,7 +124,7 @@ public:
 private:
     T* arr = new T[1];
     int vCapacity = 1;
-    int length = 1;
+    int length = 0;
 
     
 };
