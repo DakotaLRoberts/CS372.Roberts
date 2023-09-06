@@ -2,7 +2,6 @@
 using namespace std;
 #include <functional>
 #include "list.hpp"
-
 template <typename Thing>
 class Bag {
 public:
@@ -54,7 +53,7 @@ int main() {
 	std::cout << "Bag size: " << bag.size() << std::endl;
 
 
-	// Pop elements from the bag
+	
 	try {
 		while (bag.size() > 1) {
 			std::cout << "Popped: " << bag.pop() << std::endl;

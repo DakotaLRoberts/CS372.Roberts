@@ -3,7 +3,6 @@ using namespace std;
 #include"list.hpp"
 
 
-
 template <typename T>
 class CircularList : public List<T> {
 public:
