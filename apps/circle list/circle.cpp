@@ -7,7 +7,7 @@ using namespace std;
 template <typename T>
 class CircularList : public List<T> {
 public:
-    using List<T>::List; // Inherit constructors from List class
+    using List<T>::List; 
 
     void circle(int startingPos) {
         if (this->empty()) {
@@ -27,7 +27,7 @@ public:
                     ++current;
                     if (current == this->end()) {
                         current = this->begin();
-						//cout << current << endl;
+						
                     }
                 } while (current != start);
                 return;
@@ -35,31 +35,31 @@ public:
             ++size;
         }
 
-        // If startingPos is out of bounds, handle the error
+        
         std::cerr << "circle(): Starting position is out of bounds." << std::endl;
     }
 };
 
 int main() {
-    CircularList<int> circularList;
+    CircularList<int> circle;
 
-    // Populate the circular list
-    circularList.push_back(1);
-    circularList.push_back(2);
-    circularList.push_back(3);
-    circularList.push_back(4);
-    circularList.push_back(5);
+  
+    circle.push_back(1);
+    circle.push_back(2);
+    circle.push_back(3);
+    circle.push_back(4);
+    circle.push_back(5);
 
-    // Traverse and print the circular list
+   
     std::cout << "Circular List: ";
-    circularList.traverse([](int& data) {
+    circle.traverse([](int& data) {
         std::cout << data << " ";
         });
     std::cout << std::endl;
 
-    // Perform a circular traversal starting from index 2
-    std::cout << "Circular Traversal (starting from index 1): ";
-    circularList.circle(1);
+  
+    std::cout << "Circle Traverse (starting from index 1): ";
+    circle.circle(1);
     std::cout << std::endl;
 
     return 0;
