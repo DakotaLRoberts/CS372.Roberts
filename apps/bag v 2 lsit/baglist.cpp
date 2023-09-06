@@ -45,7 +45,7 @@ private:
 int main() {
 	Bag<int> bag;
 
-	// Insert some values into the bag
+	
 	bag.insert(5);
 	bag.insert(10);
 	bag.insert(5);
@@ -53,10 +53,6 @@ int main() {
 
 	std::cout << "Bag size: " << bag.size() << std::endl;
 
-	// Count occurrences
-	//std::cout << "Count of 5: " << bag.count(5) << std::endl;
-	//std::cout << "Count of 10: " << bag.count(10) << std::endl;
-	//std::cout << "Count of 20: " << bag.count(20) << std::endl;
 
 	// Pop elements from the bag
 	try {
