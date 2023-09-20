@@ -25,10 +25,26 @@ private:
         head = newNode;
         tail = newNode;
     }
-
+    void deleteListContents() {
+        Node* current = head;
+        Node* temp = nullptr;
+        while (current != nullptr) {
+            temp = current->next;
+            delete current;
+            current = temp;
+        }
+    }
 public:
     List() = default;
-
+    List(T newData) {
+        setupList();
+        head->data = newData;
+    }
+    List(List& rhs) { 
+        deleteListContents();
+        head = rhs.head;
+        tail = rhs.tail;
+    }
 
 
     bool empty() const {
@@ -176,6 +192,9 @@ int main() {
     deltionlist.push_back(47);
     deltionlist.push_back(85);
     deltionlist.push_back(46);
+    cout << "Current list" << endl;
+    deltionlist.traverse([](int data) { cout << data << " "; });
+    cout << endl;
     cout << "orginal Front: " << deltionlist.front() << endl;
     cout << "orginal Back: " << deltionlist.back() << endl;
     deltionlist.pop_front();
