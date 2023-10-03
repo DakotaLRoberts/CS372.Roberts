@@ -1,6 +1,6 @@
 #include <iostream>
 #include <memory>
-
+// https://gist.github.com/harish-r/a7df7ce576dda35c9660 this is the orginal code besides a few changes made to the find function
 class BST {
 private:
     struct Node {
