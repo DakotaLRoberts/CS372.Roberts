@@ -52,7 +52,7 @@ int main() {
         auto quicksort_end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> quicksort_time = quicksort_end - quicksort_start;
 
-        std::vector<int> stl_data = data; // Copy data for std::sort
+        std::vector<int> stl_data = data; 
         auto stl_sort_start = std::chrono::high_resolution_clock::now();
         std::sort(stl_data.begin(), stl_data.end());
         auto stl_sort_end = std::chrono::high_resolution_clock::now();
